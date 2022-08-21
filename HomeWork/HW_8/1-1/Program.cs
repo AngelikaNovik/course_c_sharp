@@ -1,7 +1,7 @@
 ﻿// Задайте двумерный массив. 
 //Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
 
-void Print(int[] arr)
+void Print(int[,] arr)
 {
     int row_size = arr.GetLength(0);
     int column_size = arr.GetLength(1);
@@ -15,7 +15,7 @@ void Print(int[] arr)
     Console.WriteLine();
 }
 
-int[] MassNums(int row, int column, int from, int to)
+int[,] MassNums(int row, int column, int from, int to)
 {
     int[,] arr = new int[row, column];
 
@@ -35,7 +35,7 @@ void Ordmin(int[,] arr)
         {
             for (int k = 0; k < column_size; k++)
                 if (arr[i, k] < arr[i, k + 1])
-                    (arr[i, k], arr[i, k + 1]) = (arr[i, k + 1],arr[i,k]);
+                    (arr[i, k], arr[i, k + 1]) = (arr[i, k + 1], arr[i, k]);
         }
     }
 }
